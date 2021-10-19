@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {}
+    "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {
+    "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+        "projectUniqueName": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
         "projectName": "TheRuhuahs-TandTNew",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+        "projectPath": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\obj\\",
+        "outputPath": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,6 +37,26 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.12, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.26, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.22, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

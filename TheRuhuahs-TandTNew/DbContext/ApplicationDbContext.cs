@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.DbContext
 {
     public class ApplicationDbContext : DbContext
