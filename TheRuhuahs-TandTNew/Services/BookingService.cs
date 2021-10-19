@@ -1,3 +1,9 @@
+using System;
+using System.Collections.Generic;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.Service;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.Services
 {
     public class BookingService : IBookingService
@@ -53,12 +59,10 @@ namespace TheRuhuahs_TandTNew.Services
             var booking = new Booking
             {
                 UserId =  model.UserId,
-                NumberOfTourist = model.NumberOfTourist,
+                NumberOfTouristToBoard= model.NumberOfTouristToBoard,
                 Reference = reference,
-                IsPaid = model.IsPaid,
                 CreatedAt = DateTime.Now,
-                Package = model.Package,
-                AmountPaid = model.AmountPaid
+                // Package = model.Package,
 
             };
             
