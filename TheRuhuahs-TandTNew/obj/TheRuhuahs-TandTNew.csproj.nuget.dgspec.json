@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {}
+    "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {
+    "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
         "projectName": "TheRuhuahs-TandTNew",
-        "projectPath": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TheRuhuahs_TandTNew.DbContext;
+using TheRuhuahs_TandTNew.Context;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
 using TheRuhuahs_TandTNew.Interfaces.Service;
 using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
