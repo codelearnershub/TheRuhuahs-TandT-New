@@ -1,3 +1,5 @@
+using System;
+
 namespace TheRuhuahs_TandTNew.Models
 {
     public class Trip
