@@ -1,7 +1,10 @@
+using System.Collections.Generic;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+using static TheRuhuahs_TandTNew.Models.ViewModel.CreateBookingViewModel;
+
 namespace TheRuhuahs_TandTNew.Interfaces.Service
 {
-    public class IBookingService
-    {
         public interface IBookingService
     {
         public Booking AddBooking(CreateBookingViewModel model);
@@ -14,5 +17,5 @@ namespace TheRuhuahs_TandTNew.Interfaces.Service
 
         public List<BookingViewModel> GetBooking();
     }
-    }
+    
 }

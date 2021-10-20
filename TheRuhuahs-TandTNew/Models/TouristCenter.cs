@@ -1,8 +1,11 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace TheRuhuahs_TandTNew.Models
 {
-    public class TouristCenter
+    public class TouristCenter : BaseEntity
     {
-       public string Name { get; set;}
+        public string Name { get; set;}
 
         public string Description { get; set;}
 

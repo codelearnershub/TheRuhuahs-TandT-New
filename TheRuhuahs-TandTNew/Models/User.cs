@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace TheRuhuahs_TandTNew.Models
 {
     public class User : BaseEntity

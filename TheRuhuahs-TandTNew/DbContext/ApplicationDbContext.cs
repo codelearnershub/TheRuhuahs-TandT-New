@@ -1,3 +1,7 @@
+using System;
+using Microsoft.EntityFrameworkCore;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.DbContext
 {
     public class ApplicationDbContext : DbContext
@@ -12,7 +16,9 @@ namespace TheRuhuahs_TandTNew.DbContext
         public DbSet<Package> Packages { get; set;}
         public DbSet<Payment> Payments { get; set;}
         public DbSet<TouristCenter> TouristCenters { get; set;}
+
         public DbSet<Trip> Trips { get; set;}
         public DbSet<UserRole> UserRoles { get; set;}
+
     }
 }

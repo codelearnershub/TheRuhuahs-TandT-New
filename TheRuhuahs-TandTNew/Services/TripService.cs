@@ -1,3 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Services
 {
     public class TripService : ITripService
@@ -9,16 +16,15 @@ namespace TheRuhuahs_TandTNew.Services
             _tripRepository = tripRepository;
         }
      
-
-
         public Trip AddTrip(CreateTripViewModel model)
         {
             var trip = new Trip
             {
+                Id = model.Id,
                 TouristCenterId = model.TouristCenterId,
                 StartDate = model.StartDate,
                 EndDate = model.EndDate,
-                NumberOfTourist = model.NumberOfTourist
+                NumberOfTouristRequired = model.NumberOfTouristRequired
 
             };
             if(model.TouristCenterId == trip.TouristCenterId)
@@ -36,7 +42,7 @@ namespace TheRuhuahs_TandTNew.Services
                 TouristCenterId = model.TouristCenterId,
                 StartDate = model.StartDate,
                 EndDate = model.EndDate,
-                NumberOfTourist = model.NumberOfTourist,
+                NumberOfTouristRequired = model.NumberOfTouristRequired
                 
             };
             return _tripRepository.UpdateTrip(trip);
@@ -56,15 +62,17 @@ namespace TheRuhuahs_TandTNew.Services
             var trip = _tripRepository.GetTrip().Select(c => new TripViewModel
             {
                 Id = c.Id,
+                CreatedAt = c.CreatedAt,
                 TouristCenterId = c.TouristCenterId,
                 StartDate = c.StartDate,
                 EndDate = c.EndDate,
-                NumberOfTourist = c.NumberOfTourist,
+                NumberOfTouristRequired = c.NumberOfTouristRequired,
                 
                
             }).ToList();
 
             return trip;
         }
+    }
 
 }

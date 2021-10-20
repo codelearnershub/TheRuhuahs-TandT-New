@@ -1,3 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Services
 {
     public class TouristCenterService : ITouristCenterService
@@ -15,9 +22,9 @@ namespace TheRuhuahs_TandTNew.Services
             var touristCenter = new TouristCenter
             {
                 Name = model.Name,
+                Description = model.Description,
                 Location = model.Location,
-                Address = model.Address,
-                TouristCenterPictureUrl = model.TouristCenterPictureUrl
+                Image = model.Image
 
             };
           
@@ -28,9 +35,9 @@ namespace TheRuhuahs_TandTNew.Services
             var touristCenter = new TouristCenter
             {
                 Name = model.Name,
+                Description = model.Description,
                 Location = model.Location,
-                Address = model.Address,
-                TouristCenterPictureUrl = model.TouristCenterPictureUrl
+                Image = model.Image
 
             };
             return _touristCenterRepository.UpdateTouristCenter(touristCenter);
@@ -52,12 +59,12 @@ namespace TheRuhuahs_TandTNew.Services
                 Id = c.Id,
                 Name = c.Name,
                 Location = c.Location,
-                Address = c.Address,
-                TouristCenterPictureUrl = c.TouristCenterPictureUrl
+                Image = c.Image
                
             }).ToList();
 
             return touristCenter;
         
         }
+    }
 }

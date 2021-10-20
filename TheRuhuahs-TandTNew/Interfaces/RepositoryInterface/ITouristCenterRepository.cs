@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.Interfaces.Repositories
 {
     public interface ITouristCenterRepository

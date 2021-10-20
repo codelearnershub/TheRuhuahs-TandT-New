@@ -1,3 +1,7 @@
+using System.Collections.Generic;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 {
     public interface IPaymentService
@@ -12,5 +16,5 @@ namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 
         public List<PaymentViewModel> GetPayment();
     }
-}
+
 }

@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
 using TheRuhuahs_TandTNew.Interfaces.Service;
 using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+using static TheRuhuahs_TandTNew.Models.ViewModel.CreateBookingViewModel;
 
 namespace TheRuhuahs_TandTNew.Services
 {
@@ -90,13 +93,11 @@ namespace TheRuhuahs_TandTNew.Services
              var booking = new Booking
             {
                 Id = model.Id,
-                NumberOfTourist = model.NumberOfTourist,
+                NumberOfTouristToBoard = model.NumberOfTouristToBoard,
                 Reference = reference,
-                IsPaid = model.IsPaid,
-                CreatedAt = DateTime.Now,
-                Package = model.Package,
-                AmountPaid = model.AmountPaid
-
+                Amount = model.Amount,
+                CreatedAt = DateTime.Now
+               
             };
             return _bookingRepository.UpdateBooking(booking);
 
@@ -106,19 +107,19 @@ namespace TheRuhuahs_TandTNew.Services
         {
             var booking = _bookingRepository.GetBooking().Select(c => new BookingViewModel
             {
-                Id=c.Id,
-                NumberOfTourist = c.NumberOfTourist,
+                Id = c.Id,
+                NumberOfTouristToBoard = c.NumberOfTouristToBoard,
                 CreatedAt = c.CreatedAt,
                 Reference = c.Reference,
-                IsPaid = c.IsPaid,
-                Package = c.Package,
-                TakeOffLocationId = c.TakeOffLocationId,
-                AmountPaid = c.AmountPaid
+                Package = c.Package,`
+                
+                Amount = c.Amount
                
             }).ToList();
 
             return booking;
         
         }
+    }
 
 }

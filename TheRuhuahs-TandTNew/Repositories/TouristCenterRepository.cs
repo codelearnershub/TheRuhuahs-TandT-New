@@ -1,10 +1,14 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.DbContext;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.Repositories
 {
-    public class TouristCenterRepository
+    public class TouristCenterRepository : ITouristCenterRepository
     {
-        
-    }
-}public readonly ApplicationDbContext _dbContext;
+        public readonly ApplicationDbContext _dbContext;
         public TouristCenterRepository(ApplicationDbContext dBContext)
         { _dbContext = dBContext; }
         public TouristCenter AddTouristCenter(TouristCenter touristCenter)
@@ -37,3 +41,5 @@ namespace TheRuhuahs_TandTNew.Repositories
         {
             return _dbContext.TouristCenters.ToList();
         }
+    }
+}

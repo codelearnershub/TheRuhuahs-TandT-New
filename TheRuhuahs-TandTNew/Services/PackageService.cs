@@ -1,3 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.Service;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Services
 {
      public class PackageService : IPackageService
@@ -16,7 +23,6 @@ namespace TheRuhuahs_TandTNew.Services
                 
                 TripId = model.TripId,
                 HotelStandard = model.HotelStandard,
-                TripType = model.TripType,
                 HotelExpense = model.HotelExpense,
                 FeedingExpense = model.FeedingExpense
 
@@ -30,7 +36,6 @@ namespace TheRuhuahs_TandTNew.Services
             {
                 TripId = model.TripId,
                 HotelStandard = model.HotelStandard,
-                TripType = model.TripType,
                 HotelExpense = model.HotelExpense,
                 FeedingExpense = model.FeedingExpense
 
@@ -54,7 +59,6 @@ namespace TheRuhuahs_TandTNew.Services
                 Id = c.Id,
                 TripId = c.TripId,
                 HotelStandard = c.HotelStandard,
-                TripType = c.TripType,
                 HotelExpense = c.HotelExpense,
                 FeedingExpense = c.FeedingExpense
                
@@ -63,4 +67,5 @@ namespace TheRuhuahs_TandTNew.Services
             return package;
         
         }
+    }
 }

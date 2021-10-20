@@ -1,6 +1,12 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.DbContext;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Models;
+
 namespace TheRuhuahs_TandTNew.Repositories
 {
-    public class TripRepository
+    public class TripRepository : ITripRepository
     {
         public readonly ApplicationDbContext _dbContext;
         public TripRepository(ApplicationDbContext dBContext)
@@ -35,10 +41,6 @@ namespace TheRuhuahs_TandTNew.Repositories
         {
             return _dbContext.Trips.ToList();
         }
-
-        public Trip Trip(Trip trip)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

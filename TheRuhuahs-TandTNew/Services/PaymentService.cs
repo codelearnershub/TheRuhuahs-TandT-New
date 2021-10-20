@@ -1,7 +1,13 @@
+using System.Collections.Generic;
+using System.Linq;
+using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.Service;
+using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Services
 {
-    public class PackageService : IPackageService
-    {
         public class PaymentService : IPaymentService
     {
         private readonly IPaymentRepository _paymentRepository;
@@ -15,7 +21,8 @@ namespace TheRuhuahs_TandTNew.Services
         {
             var payment = new Payment
             {
-                Id = model.UserId,
+
+                Id = model.Id,
                 UserId = model.UserId,
                 Amount = model.Amount,
                 CreatedAt = model.CreatedAt,
@@ -29,6 +36,7 @@ namespace TheRuhuahs_TandTNew.Services
         {
             var payment = new Payment
             {
+                Id = model.Id,
                 UserId = model.UserId,
                 Amount = model.Amount,
                 CreatedAt = model.CreatedAt,
@@ -60,7 +68,7 @@ namespace TheRuhuahs_TandTNew.Services
 
             return payment;
         }
-        
-    
+
+       
     }
 }

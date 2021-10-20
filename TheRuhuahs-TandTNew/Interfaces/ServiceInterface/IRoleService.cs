@@ -1,7 +1,9 @@
+using System.Collections.Generic;
+using TheRuhuahs_TandTNew.Models;
+using TheRuhuahs_TandTNew.Models.ViewModel;
+
 namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 {
-    public class IRoleService
-    {
         public interface IRoleService
     {
         public Role AddRole(CreateRoleViewModel model);
@@ -14,5 +16,5 @@ namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 
         public List<RoleViewModel> GetRole();
     }
-    }
+    
 }
