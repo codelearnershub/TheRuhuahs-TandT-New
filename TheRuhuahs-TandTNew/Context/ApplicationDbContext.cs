@@ -1,8 +1,7 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using TheRuhuahs_TandTNew.Models;
 
-namespace TheRuhuahs_TandTNew.DbContext
+namespace TheRuhuahs_TandTNew.Context
 {
     public class ApplicationDbContext : DbContext
     {
@@ -19,6 +18,5 @@ namespace TheRuhuahs_TandTNew.DbContext
 
         public DbSet<Trip> Trips { get; set;}
         public DbSet<UserRole> UserRoles { get; set;}
-
     }
 }
