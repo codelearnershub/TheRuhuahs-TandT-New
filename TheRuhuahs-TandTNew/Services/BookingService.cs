@@ -61,11 +61,12 @@ namespace TheRuhuahs_TandTNew.Services
             while (ReferenceExist(allBookings, reference));
             var booking = new Booking
             {
-                UserId =  model.UserId,
-                NumberOfTouristToBoard= model.NumberOfTouristToBoard,
+                Id = model.Id,
+                NumberOfTouristToBoard = model.NumberOfTouristToBoard,
                 Reference = reference,
-                CreatedAt = DateTime.Now,
-                // Package = model.Package,
+                Amount = model.Amount,
+                Package = model.Package,
+                CreatedAt = DateTime.Now
 
             };
             
@@ -96,6 +97,7 @@ namespace TheRuhuahs_TandTNew.Services
                 NumberOfTouristToBoard = model.NumberOfTouristToBoard,
                 Reference = reference,
                 Amount = model.Amount,
+                Package = model.Package,
                 CreatedAt = DateTime.Now
                
             };
@@ -111,8 +113,7 @@ namespace TheRuhuahs_TandTNew.Services
                 NumberOfTouristToBoard = c.NumberOfTouristToBoard,
                 CreatedAt = c.CreatedAt,
                 Reference = c.Reference,
-                Package = c.Package,`
-                
+                Package = c.Package,
                 Amount = c.Amount
                
             }).ToList();

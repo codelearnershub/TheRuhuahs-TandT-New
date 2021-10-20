@@ -12,7 +12,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
         public string Reference { get; set;}
 
-        // public string Package { get; set;}
+        public string Package { get; set;}
 
         public decimal Amount { get; set;}
 
@@ -29,7 +29,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
             public string Reference { get; set;}
 
-            // public string Package { get; set;}
+            public string Package { get; set;}
 
             public decimal Amount { get; set;}
 
@@ -45,7 +45,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
             public string Reference { get; set;}
 
-            // public string Package { get; set;}
+             public string Package { get; set;}
 
             public decimal Amount { get; set;}
 
