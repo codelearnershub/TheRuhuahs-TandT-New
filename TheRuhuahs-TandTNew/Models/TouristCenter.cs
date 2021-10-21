@@ -1,3 +1,6 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace TheRuhuahs_TandTNew.Models
 {
     public class TouristCenter

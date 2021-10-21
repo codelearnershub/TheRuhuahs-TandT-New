@@ -10,7 +10,7 @@ namespace TheRuhuahs_TandTNew.Models
 
         public string Reference { get; set;}
 
-        // public string Package { get; set;}
+        public string Package { get; set;}
 
         public decimal Amount { get; set;}
     }

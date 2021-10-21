@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
+
 namespace TheRuhuahs_TandTNew.Models
 {
     public class User : BaseEntity
     {
-        public List<UserRole> UserRoles { get; set;} = new List<UserRole>();
+        public List<UserRole> UserRoles { get; set;}
         
         public string FirstName { get; set;}
 

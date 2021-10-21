@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace TheRuhuahs_TandTNew.Models.ViewModel
 {
     public class LoginViewModel

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace TheRuhuahs_TandTNew.Models
 {
     public class Role : BaseEntity
