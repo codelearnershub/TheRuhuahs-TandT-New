@@ -17,12 +17,14 @@ namespace TheRuhuahs_TandTNew.Controllers
         private readonly IUserService _userService;
         private readonly IRoleService _roleService;
         private readonly IUserRepository _userRepository;
+        private readonly IBookingService _bookingRepository;
 
-        public  AuthController(IUserService userService, IRoleService roleService, IUserRepository userRepository)
+        public  AuthController(IUserService userService, IRoleService roleService, IUserRepository userRepository, IBookingService bookingService)
         {
             _userService = userService;
             _roleService = roleService;
             _userRepository = userRepository;
+            _bookingService = bookingService; 
 
         }
 

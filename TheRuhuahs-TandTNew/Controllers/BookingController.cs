@@ -30,7 +30,7 @@ namespace TheRuhuahs_TandTNew.Controllers
         [HttpPost]
         public IActionResult Create(CreateBookingViewModel model)
         {
-             int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
+            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
 
            Booking booking = new Booking()
            {
@@ -43,6 +43,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             _bookingService.AddBooking(model);
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public IActionResult Update()
         {   
