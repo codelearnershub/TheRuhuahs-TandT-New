@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -31,21 +27,6 @@ namespace TheRuhuahs_TandTNew
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ApplicationDbContext>(option => option.UseMySQL(Configuration.GetConnectionString("ApplicationDbContext")));
-            services.AddScoped<IBookingRepository,BookingRepository>();
-            services.AddScoped<IBookingService, BookingService>();
-            services.AddScoped<IPackageRepository,PackageRepository>();
-            services.AddScoped<IPackageService, PackageService>();
-            services.AddScoped<IPaymentRepository,PaymentRepository>();
-            services.AddScoped<IPaymentService, PaymentService>();
-            services.AddScoped<ITripRepository,TripRepository>();
-            services.AddScoped<ITripService, TripService>();
-            services.AddScoped<ITouristCenterRepository, TouristCenterRepository>();
-            services.AddScoped<ITouristCenterService, TouristCenterService>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IRoleRepository, RoleRepository>();
-            services.AddScoped<IRoleService, RoleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

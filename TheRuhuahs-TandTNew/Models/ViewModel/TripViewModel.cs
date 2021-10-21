@@ -13,6 +13,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
         public DateTime StartDate { get; set;}
 
         public DateTime EndDate { get; set;}
+        public string Package { get; set;}
 
         public int NumberOfTouristRequired { get; set;}
     }
@@ -40,6 +41,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
         public DateTime StartDate { get; set;}
 
         public DateTime EndDate { get; set;}
+        public string Package { get; set;}
 
         public int NumberOfTouristRequired { get; set;}
     }

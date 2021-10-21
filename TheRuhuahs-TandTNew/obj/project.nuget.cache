@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "NcNr+rnDko7i8eqmKPkZjLQ0cLEGEvdI+B8RTkls0CkDsW+P+fVPvPS0tRm7tmSIEFuLufyCPyMAFXy3U/zqxw==",
   "success": true,
   "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+=======
+  "dgSpecHash": "Cj/jZhfqvHbC5MARZYlZXMsDQAk1+ij3InIFm+9B2wdFl4MylUvO0UhbW4RC1HQ9tn/jTOO7FRNfsPix0I4MRg==",
+  "success": true,
+  "projectFilePath": "c:\\Users\\ADMIN\\Desktop\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew\\TheRuhuahs-TandTNew.csproj",
+>>>>>>> origin/main
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
