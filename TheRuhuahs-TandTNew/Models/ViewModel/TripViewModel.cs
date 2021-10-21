@@ -12,7 +12,11 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
         public DateTime StartDate { get; set;}
 
+<<<<<<< HEAD
         public DateTime EndDate { get; set;}
+=======
+        public string Package { get; set;}
+>>>>>>> origin/main
 
         public int NumberOfTouristRequired { get; set;}
     }
@@ -39,7 +43,11 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
         public DateTime StartDate { get; set;}
 
+<<<<<<< HEAD
         public DateTime EndDate { get; set;}
+=======
+        public string Package { get; set;}
+>>>>>>> origin/main
 
         public int NumberOfTouristRequired { get; set;}
     }
