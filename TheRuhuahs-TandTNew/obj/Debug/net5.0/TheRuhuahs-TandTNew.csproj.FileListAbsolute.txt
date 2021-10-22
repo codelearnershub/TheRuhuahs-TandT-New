@@ -1,8 +1,0 @@
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.csprojAssemblyReference.cache
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.AssemblyInfoInputs.cache
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.AssemblyInfo.cs
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.csproj.CoreCompileInputs.cache
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.RazorAssemblyInfo.cache
-C:\Users\ADMIN\Desktop\TheRuhuahs-TandTNew\TheRuhuahs-TandTNew\obj\Debug\net5.0\TheRuhuahs-TandTNew.RazorAssemblyInfo.cs

@@ -1,9 +1,8 @@
-using Microsoft.EntityFrameworkCore;
 using TheRuhuahs_TandTNew.Models;
 
 namespace TheRuhuahs_TandTNew.Context
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext 
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
