@@ -2,7 +2,7 @@ namespace TheRuhuahs_TandTNew.Models
 {
     public class UserRole : BaseEntity
     {
-       public int UserId { get; set;}
+        public int UserId { get; set;}
 
         public User User { get; set;}
         

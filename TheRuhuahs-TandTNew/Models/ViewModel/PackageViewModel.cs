@@ -37,4 +37,8 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
         public string TransportationStandard { get; set;}
     }
+    public class UpdatePackageViewModel : CreatePackageViewModel
+    {
+        
+    }
 }

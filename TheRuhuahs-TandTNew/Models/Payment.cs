@@ -1,6 +1,6 @@
 namespace TheRuhuahs_TandTNew.Models
 {
-    public class Payment
+    public class Payment : BaseEntity
     {
         public int UserId { get; set;}
 

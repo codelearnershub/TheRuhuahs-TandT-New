@@ -5,8 +5,7 @@ namespace TheRuhuahs_TandTNew.Models
 {
     public class User : BaseEntity
     {
-        public List<UserRole> UserRoles { get; set;}
-        
+        public List<UserRole> UserRoles { get; set;} 
         public string FirstName { get; set;}
 
         public string LastName { get; set;}

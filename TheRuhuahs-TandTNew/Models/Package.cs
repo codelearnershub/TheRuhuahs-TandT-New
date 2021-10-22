@@ -1,6 +1,6 @@
 namespace TheRuhuahs_TandTNew.Models
 {
-    public class Package
+    public class Package : BaseEntity
     {
         public int TripId { get; set;}
 

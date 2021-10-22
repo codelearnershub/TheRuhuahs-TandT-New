@@ -2,7 +2,7 @@ using System;
 
 namespace TheRuhuahs_TandTNew.Models
 {
-    public class Trip
+    public class Trip : BaseEntity
     {
         public int TouristCenterId { get; set;}
 
