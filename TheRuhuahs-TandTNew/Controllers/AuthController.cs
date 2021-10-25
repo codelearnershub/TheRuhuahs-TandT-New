@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
+using TheRuhuahs_TandTNew.Interfaces.Service;
 using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
 using TheRuhuahs_TandTNew.Models;
 using TheRuhuahs_TandTNew.Models.ViewModel;
@@ -17,7 +18,7 @@ namespace TheRuhuahs_TandTNew.Controllers
         private readonly IUserService _userService;
         private readonly IRoleService _roleService;
         private readonly IUserRepository _userRepository;
-        private readonly IBookingService _bookingRepository;
+        private readonly IBookingService _bookingService;
 
         public  AuthController(IUserService userService, IRoleService roleService, IUserRepository userRepository, IBookingService bookingService)
         {
