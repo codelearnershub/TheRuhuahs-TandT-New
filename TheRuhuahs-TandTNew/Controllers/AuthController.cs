@@ -42,15 +42,33 @@ namespace TheRuhuahs_TandTNew.Controllers
         }
 
         [HttpPost]
-        public IActionResult Register(RegisterViewModel model)
+        public IActionResult RegisterUser(RegisterViewModel model)
         {
 
-            _userService.RegisterUser(model);
+            _userService.Register(model);
+            var role = _roleService.FindByRoleName("Admin");
+            var roles = new List<Role>();
+            roles.Add(role);
+            model.Roles = roles;
+            _userService.Register(model);
+            return RedirectToAction("Login");
+        }
+        [HttpGet]
+        public IActionResult RegisterCustomer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterCustomer(RegisterCustomerViewModel model)
+        {
+
+            _userService.RegisterCustomer(model);
             var role = _roleService.FindByRoleName("Customer");
             var roles = new List<Role>();
             roles.Add(role);
             model.Roles = roles;
-            _userService.RegisterUser(model);
+            _userService.RegisterCustomer(model);
             return RedirectToAction("Login");
         }
 

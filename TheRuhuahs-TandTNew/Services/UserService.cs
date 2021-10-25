@@ -32,7 +32,7 @@ namespace TheRuhuahs_TandTNew.Services
 
             return hashed;
         }
-        public void Register(RegisterViewModel model)
+        public void RegisterCustomer(RegisterCustomerViewModel model)
         {
             byte[] salt = new byte[128 / 8];
 
@@ -71,54 +71,54 @@ namespace TheRuhuahs_TandTNew.Services
                 user.UserRoles.Add(userRole);
                 _userRepository.AddUser(user);
                 }
-            else{
+            else
+            {
                 throw new Exception("No Role found");
             }
         }
               
-        // public void RegisterUser(RegisterViewModel model)
-        // {
-        //     byte[] salt = new byte[128 / 8];
+        public void Register(RegisterViewModel model)
+        {
+            byte[] salt = new byte[128 / 8];
 
-        //     using (var rng = RandomNumberGenerator.Create())
-        //     {
-        //         rng.GetBytes(salt);
-        //     }
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
 
-        //     string saltString = Convert.ToBase64String(salt);
+            string saltString = Convert.ToBase64String(salt);
 
-        //     string hashedPassword = HashPassword(model.Password, saltString);
-        //     var role = _roleRepository.FindByRoleName("Admin");
-        //     if (role != null)
-        //     {
-        //         User user = new User
-        //         {
-        //             FirstName = model.FirstName,
-        //             LastName = model.LastName,
-        //             Email = model.Email,
-        //             Gender = model.Gender,
-        //             Password = model.Password,
-        //             PasswordHash = hashedPassword,
-        //             HashSalt = saltString,
-        //             Mobile = model.Mobile,
-        //             DateOfBirth = model.DateOfBirth,
-        //             StreetAddress = model.StreetAddress,
-        //             State = model.State,
-        //             Country = model.Country
+            string hashedPassword = HashPassword(model.Password, saltString);
+            var role = _roleRepository.FindByRoleName("Admin");
+            if (role != null)
+            {
+                User user = new User
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email,
+                    Gender = model.Gender,
+                    Password = model.Password,
+                    PasswordHash = hashedPassword,
+                    HashSalt = saltString,
+                    Mobile = model.Mobile,
+                    DateOfBirth = model.DateOfBirth,
+                    StreetAddress = model.StreetAddress,
+                    State = model.State,
+                    Country = model.Country
 
                     
-        //         };
-            
-            
-        //         var userRole = new UserRole
-        //         {
-        //             UserId = user.Id,
-        //             RoleId = role.Id,
-        //         };
-        //         user.UserRoles.Add(userRole);
-        //         _userRepository.AddUser(user);
-        //     };
-        // }
+                };
+                        
+                var userRole = new UserRole
+                {
+                    UserId = user.Id,
+                    RoleId = role.Id,
+                };
+                user.UserRoles.Add(userRole);
+                _userRepository.AddUser(user);
+            };
+        }
         public User LoginUser(string email, string password)
         {
             User user = _userRepository.FindByUserEmail(email);
@@ -140,9 +140,5 @@ namespace TheRuhuahs_TandTNew.Services
             return null;
         }
 
-        public void RegisterUser(RegisterViewModel model)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

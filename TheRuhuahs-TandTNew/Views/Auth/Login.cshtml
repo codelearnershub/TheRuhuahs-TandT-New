@@ -1,0 +1,80 @@
+@model TheRuhuahs_TandTNew.Models.ViewModel.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+ }
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.Message</p>
+}
+    @* <div>
+        <div>
+            <form asp-action="Login">
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" placeholder="User Email"/>
+                </div>
+
+                <div>
+                    <label asp-for="Password">Password</label>
+                    <input type="password" asp-for="Password" placeholder="Password"/>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-dark">Login</button><h6>if you do not have an account </h6>
+                    <a class="btn btn-primary" asp-area="" asp-controller="Auth" asp-action="Login">Sign-Up here</a>
+                </div>
+            </form>
+        </div>
+    </div> *@
+     @* @{ ViewBag.Title = "Login"; }  *@
+
+
+<body>
+    <div class="row justify-content-center" style="margin-bottom:200px">
+
+        <div class="card" id="login-card">
+
+            <div class="card-header">
+                </> <span class="font-weight-bold big-text" style="color: green" >Sign Into Your Account</span>
+            </div>
+
+            <div class="card-body">
+
+                <form method="post" class=" validate-form">
+
+                    <div class="wrap-input500 validate-input">
+                        <input asp-for="Email" class="input500" placeholder="Email Address" />
+                        <span asp-validation-for="Email" style="color:darkred; margin-left:20%"></span>
+                        <span class="symbol-input150">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+                    <div class=" wrap-input500 validate-input">
+                        <input type="password" asp-for="Password" class="input150" placeholder="Password" />
+                        <span asp-validation-for="Password" style="color:darkred; margin-left:20%"></span>
+                        <span class="symbol-input500">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+
+                    <div class="container-login100-form-btn">
+                        <input type="submit" class="btn btn-success"  title ="Login" />
+
+                    </div>
+                    <a style="margin-right: 5%; color:green">You don't have an account ?, Register here</a>
+                    <a class="btn btn-success" asp-area="" asp-controller="Auth" asp-action="Register">Click to Register</a>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

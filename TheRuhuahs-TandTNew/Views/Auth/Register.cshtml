@@ -1,0 +1,79 @@
+@model TheRuhuahs_TandTNew.Models.ViewModel.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+
+<h2 class="text-center font-weight-bolder" style="color:green">Welcome Dear Customer</h2>
+<h3 class="text-center font-weight-bolder" style="color:green">Kindly Register here</h3>
+<body>
+    <div class="card">
+    <form method="post">
+    <div>
+        <input type="text"asp-for="FirstName" name="FirstName" placeholder="First Name" class="form-control" />
+        <span asp-validation-for="FirstName" style="color:darkred"></span>
+    </div>
+    <div>
+        <input type="text" asp-for="LastName"name="LastName" placeholder="Last Name" class="form-control" />
+        <span asp-validation-for="LastName" style="color:darkred"></span>
+    </div>
+    <div>
+        @* <input type="text" asp-for="Gender"name="Gender" placeholder="Gender" class="form-control" /> *@
+         
+            <label asp-for="Gender" class="form-check-label font-weight-light"><span style="color: green"></span> Gender </label>
+            <select id="Gender" name="Gender">
+                <option value=""></option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <span asp-validation-for="Gender" style="color:green"></span>
+
+</div>
+    <div>
+        <input type="email" asp-for="Email"name="Email" placeholder="Email" class="form-control" />
+        <span asp-validation-for="LastName" style="color:darkred"></span>
+    </div>
+    <div>
+        <input type="Mobile" asp-for="Mobile"name="Mobile" placeholder="Phone No" class="form-control" />
+        <span asp-validation-for="Mobile" style="color:darkred"></span>
+    </div>
+    <div>
+        <input type="datetime" asp-for="DateOfBirth"name="DateOfBirth" placeholder="Date Of Birth" class="form-control" />
+        <span asp-validation-for="DateOfBirth" style="color:darkred"></span>
+    </div>
+    <div>
+        <input type="text" asp-for="StreetAddress"name="StreetAddress" placeholder="Address" class="form-control" />
+        <span asp-validation-for="StreetAddress" style="color:darkred"></span>
+    </div>
+     <div>
+        <input type="text"  asp-for="State" placeholder="State" class="form-control" />
+        <span asp-validation-for="State" style="color:darkred"></span>
+
+    </div>
+    <div>
+        <input type="text"  asp-for="Country" placeholder="Country" class="form-control" />
+        <span asp-validation-for="Country" style="color:darkred"></span>
+    </div>
+     @* <div>
+        <input type="password"  asp-for="PasswordHas" placeholder="Password" class="form-control" />
+        <span asp-validation-for="Password" style="color:darkred"></span>
+    </div> *@
+     <div>
+        <input type="password"  asp-for="Password" placeholder="Password" class="form-control" />
+        <span asp-validation-for="Password" style="color:darkred"></span>
+    </div>
+    <div>
+        <input type="password"  asp-for="ConfirmPassword" placeholder="Confirm Password" class="form-control" />
+        <span asp-validation-for="ConfirmPassword" style="color:darkred"></span>
+    </div>
+    <div>
+        
+         <input type="submit" value="Register" class="btn btn-success" />      
+
+    </div>
+</form>
+</div>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 
