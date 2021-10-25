@@ -4,7 +4,7 @@ using TheRuhuahs_TandTNew.Models;
 
 namespace TheRuhuahs_TandTNew.Context
 {
-    public class ApplicationDbContext :DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
@@ -16,7 +16,6 @@ namespace TheRuhuahs_TandTNew.Context
         public DbSet<Package> Packages { get; set;}
         public DbSet<Payment> Payments { get; set;}
         public DbSet<TouristCenter> TouristCenters { get; set;}
-
         public DbSet<Trip> Trips { get; set;}
         public DbSet<UserRole> UserRoles { get; set;}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
