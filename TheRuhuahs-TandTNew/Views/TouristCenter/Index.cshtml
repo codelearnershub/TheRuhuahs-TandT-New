@@ -1,0 +1,40 @@
+@model IEnumerable<TheRuhuahs_TandTNew.Models.ViewModel.TouristCenterViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card">
+    <h2 class="text-center font-weight-bolder" style="color:green" >Tourist Center</h2>
+</div>
+<div class="mb-4 border-right">
+    <a class="btn btn-success" asp-controller="TouristCenter" asp-action="Create"> Create Tourist Center</a>
+</div>
+
+ <table class="table table-hover" >
+    <thead class="thead-green">
+        <tr>
+            
+            <th scope="colgroup">Name</th>
+            <th scope="colgroup">Description</th>
+            <th scope="colgroup"> Location</th>
+            <th scope="colgroup">Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var touristCenter in Model)
+        {
+            <tr>
+
+                <td>@touristCenter.Name</td>
+                <td>@touristCenter.Description</td>
+                <td>@touristCenter.Location</td> 
+                <td>@touristCenter.Image</td>
+                <td>
+
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@touristCenter.Id">Delete</a>
+                    <a class="btn btn-succes" asp-action="Update" asp-route-id="@touristCenter.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

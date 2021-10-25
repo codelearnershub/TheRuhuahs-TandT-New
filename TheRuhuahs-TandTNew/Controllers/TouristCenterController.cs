@@ -23,6 +23,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             var touristCenter = _touristCenterService.GetTouristCenter();
             return View(touristCenter);
         }
+        // [Authorize ( Roles = "SuperAdmin, Admin")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -54,6 +55,7 @@ namespace TheRuhuahs_TandTNew.Controllers
 
             return RedirectToAction("Index");
         }
+        // [Authorize ( Roles = "SuperAdmin, Admin")]
         [HttpGet]
         public IActionResult Update()
         {

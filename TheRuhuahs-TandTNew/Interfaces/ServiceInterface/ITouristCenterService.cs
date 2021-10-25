@@ -6,9 +6,11 @@ namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 {
     public interface ITouristCenterService
     
-    {  public TouristCenter AddTouristCenter(CreateTouristCenterViewModel touristCenter);
+    {  
+        public TouristCenter AddTouristCenter(CreateTouristCenterViewModel touristCenter);
 
         public TouristCenter UpdateTouristCenter(UpdateTouristCenterViewModel model);
+
       
         public TouristCenter FindByTouristCenterId(int id);
        
