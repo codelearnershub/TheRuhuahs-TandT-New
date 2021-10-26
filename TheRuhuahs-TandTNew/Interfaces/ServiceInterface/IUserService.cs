@@ -5,7 +5,9 @@ namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
 {
     public interface IUserService
     {
-        public void RegisterUser(RegisterViewModel model);
+        public void Register(RegisterViewModel model);
+
+        public void RegisterCustomer(RegisterCustomerViewModel model);
 
         public User LoginUser(string email, string password);
     }

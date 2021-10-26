@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,5 +15,7 @@ namespace TheRuhuahs_TandTNew.Models
         [DisplayName("Item Picture URL")]
         [StringLength(1024)]
         public string Image { get; set; } 
+
+        public List<Trip> Trip { get; set;}
     }
 }

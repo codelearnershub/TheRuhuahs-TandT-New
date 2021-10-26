@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace TheRuhuahs_TandTNew.Models
 {
@@ -11,5 +12,7 @@ namespace TheRuhuahs_TandTNew.Models
         public DateTime EndDate { get; set;}
 
         public int NumberOfTouristRequired { get; set;}
+
+        public List<Package> Package { get; set;}
     }
 }
