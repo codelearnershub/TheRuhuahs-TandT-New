@@ -28,7 +28,9 @@
                 <td>@touristCenter.Name</td>
                 <td>@touristCenter.Description</td>
                 <td>@touristCenter.Location</td> 
-                <td>@touristCenter.Image</td>
+                <td>
+                    <img src= "@touristCenter.Image" width="100px" />
+                </td>
                 <td>
 
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@touristCenter.Id">Delete</a>

@@ -12,7 +12,7 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
 
         public string Reference { get; set;}
 
-         public string Package { get; set;}
+         public int PackageId { get; set;}
 
         public decimal Amount { get; set;}
 
@@ -23,13 +23,13 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
         {
             public int Id { get; set;}
 
-        public int UserId { get; set;}
+            public int UserId { get; set;}
 
-        public int NumberOfTouristToBoard { get; set;}
+            public int NumberOfTouristToBoard { get; set;}
 
             public string Reference { get; set;}
 
-        public string Package { get; set;}
+            public int PackageId { get; set;}
 
             public decimal Amount { get; set;}
 

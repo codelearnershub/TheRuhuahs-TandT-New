@@ -65,7 +65,7 @@ namespace TheRuhuahs_TandTNew.Services
                 NumberOfTouristToBoard = model.NumberOfTouristToBoard,
                 Reference = reference,
                 Amount = model.Amount,
-                Package = model.Package,
+                PackageId = model.PackageId,
                 CreatedAt = DateTime.Now
 
             };
@@ -97,7 +97,7 @@ namespace TheRuhuahs_TandTNew.Services
                 NumberOfTouristToBoard = model.NumberOfTouristToBoard,
                 Reference = reference,
                 Amount = model.Amount,
-                Package = model.Package,
+                PackageId = model.PackageId,
                 CreatedAt = DateTime.Now
                
             };
@@ -113,7 +113,7 @@ namespace TheRuhuahs_TandTNew.Services
                 NumberOfTouristToBoard = c.NumberOfTouristToBoard,
                 CreatedAt = c.CreatedAt,
                 Reference = c.Reference,
-                Package = c.Package,
+                PackageId = c.PackageId,
                 Amount = c.Amount
                
             }).ToList();

@@ -98,7 +98,8 @@ namespace TheRuhuahs_TandTNew.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
-                    // new Claim(ClaimTypes.Role, "SuperAdmin")
+                    new Claim(ClaimTypes.Role, "SuperAdmin"),
+                    new Claim(ClaimTypes.Role, "Admin")
                 };
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 

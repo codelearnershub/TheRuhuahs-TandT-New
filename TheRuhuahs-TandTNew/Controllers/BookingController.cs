@@ -36,7 +36,7 @@ namespace TheRuhuahs_TandTNew.Controllers
            {
               UserId = userId,
               NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-              Package = model.Package,
+              PackageId = model.PackageId,
               Amount = model.Amount
 
            };
@@ -56,7 +56,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             Booking booking = new Booking()
            {
               NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-              Package = model.Package,
+              PackageId = model.PackageId,
               Amount = model.Amount
 
            };
