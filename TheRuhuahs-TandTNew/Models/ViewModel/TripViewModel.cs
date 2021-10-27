@@ -8,6 +8,8 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
     {
         public int Id { get; set;}
 
+        public string Name { get; set;}
+
         public DateTime CreatedAt { get; set;}
 
         public int TouristCenterId { get; set;}
@@ -22,6 +24,8 @@ namespace TheRuhuahs_TandTNew.Models.ViewModel
     public class CreateTripViewModel
     {
         public int Id { get; set;}
+
+        public string Name { get; set;}
         public DateTime CreatedAt { get; set;}
 
         public DateTime Created{ get; set;}

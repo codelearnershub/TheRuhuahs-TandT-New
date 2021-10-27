@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
@@ -22,6 +23,8 @@ namespace TheRuhuahs_TandTNew.Services
             {
                 
                 TripId = model.TripId,
+                PackageType = model.PackageType,
+                CreatedAt = DateTime.Now,
                 HotelStandard = model.HotelStandard,
                 HotelExpense = model.HotelExpense,
                 FeedingExpense = model.FeedingExpense
@@ -32,14 +35,19 @@ namespace TheRuhuahs_TandTNew.Services
         }
         public Package UpdatePackage(UpdatePackageViewModel model)
         {
-            var package = new Package
+            var package = _packageRepository.FindByPackageId(model.Id);
+            if (package == null)
             {
-                TripId = model.TripId,
-                HotelStandard = model.HotelStandard,
-                HotelExpense = model.HotelExpense,
-                FeedingExpense = model.FeedingExpense
+                return null;
+            }
 
-            };
+            package.Id = model.Id;
+            package.PackageType = model.PackageType;
+            package.CreatedAt = DateTime.Now;
+            package.TripId = model.TripId;
+            package.HotelStandard = model.HotelStandard;
+            package.HotelExpense = model.HotelExpense;
+
             return _packageRepository.UpdatePackage(package);
         }
 
@@ -58,6 +66,8 @@ namespace TheRuhuahs_TandTNew.Services
             {
                 Id = c.Id,
                 TripId = c.TripId,
+                PackageType = c.PackageType,
+                CreatedAt = c.CreatedAt,
                 HotelStandard = c.HotelStandard,
                 HotelExpense = c.HotelExpense,
                 FeedingExpense = c.FeedingExpense

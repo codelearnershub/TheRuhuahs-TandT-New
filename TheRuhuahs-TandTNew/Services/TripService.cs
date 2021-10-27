@@ -22,6 +22,7 @@ namespace TheRuhuahs_TandTNew.Services
             var trip = new Trip
             {
                 Id = model.Id,
+                Name = model.Name,
                 CreatedAt = DateTime.Now,
                 TouristCenterId = model.TouristCenterId,
                 StartDate = model.StartDate,
@@ -42,6 +43,7 @@ namespace TheRuhuahs_TandTNew.Services
             }
 
             trip.Id = model.Id;
+            trip.Name = model.Name;
             trip.CreatedAt = DateTime.Now;
             trip.TouristCenterId = model.TouristCenterId;
             trip.StartDate = model.StartDate;
@@ -65,6 +67,7 @@ namespace TheRuhuahs_TandTNew.Services
             var trip = _tripRepository.GetTrip().Select(c => new TripViewModel
             {
                 Id = c.Id,
+                Name = c.Name,
                 CreatedAt = c.CreatedAt,
                 TouristCenterId = c.TouristCenterId,
                 StartDate = c.StartDate,

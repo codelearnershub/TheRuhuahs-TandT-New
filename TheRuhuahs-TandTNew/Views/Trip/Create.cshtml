@@ -15,23 +15,23 @@
                         <div class="form-row">
 
                             <div class="form-group col-md-5">
-                                <label asp-for="StartDate" class="form-check-label font-weight-bold"><span style="color: darkred"></span>Tour Start Date</label>
-                                <input asp-for="StartDate" class="form-control" placeholder="Start Date" type="month" />
-                                <span asp-validation-for="StartDate" style="color:darkred"></span>
+                                <label asp-for="Name" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Trip Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Name" type="text" />
+                                <span asp-validation-for="Name" style="color:darkred"></span>
                             </div>
                             @* <div class="form-group col-md-2">
                             </div> *@
                             <div class="form-group col-md-5">
-                                <label asp-for="EndDate" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Tour End Date </label>
-                                <input asp-for="EndDate" class="form-control" placeholder="End Date" type="month" />
-                                <span asp-validation-for="EndDate" style="color:darkred"></span>
+                                <label asp-for="StartDate" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Tour Start Date </label>
+                                <input asp-for="StartDate" class="form-control" placeholder="StartDate" type="date" />
+                                <span asp-validation-for="StartDate" style="color:darkred"></span>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <label asp-for="NumberOfTouristRequired" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Number Of Tourist Required</label>
-                                <input asp-for="NumberOfTouristRequired" class="form-control" placeholder="Number Of Tourist" type="number" />
-                                <span asp-validation-for="NumberOfTouristRequired" style="color:darkred"></span>
+                                <label asp-for="EndDate" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Tour End Date</label>
+                                <input asp-for="EndDate" class="form-control" placeholder="EndDate" type="date" />
+                                <span asp-validation-for="EndDate" style="color:darkred"></span>
                             </div>
                             @* <div class="form-group col-md-2">
                             </div> *@
@@ -45,18 +45,12 @@
                                     <span asp-validation-for="TouristCenterId" style="color:darkred"></span><br>
                                 </div>
                             </div>
-                        @* <div class="form-row">
-                            <div class="form-group col-md-5">
-                                <label asp-for="TakeOffLocation" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Take Off Location </label>
-                                <input asp-for="TakeOffLocation" class="form-control" placeholder=" Take Off Location" type="text"  />
-                                <span asp-validation-for="TakeOffLocation" style="color:darkred"></span>
-                            </div>
                         <div class="form-group col-md-5">
-                            <label asp-for="AmountPaid" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Required Amount </label>
-                            <input asp-for="AmountPaid" class="form-control" placeholder="Required Amount " type="text" />
-                            <span asp-validation-for="AmountPaid" style="color:darkred"></span>
+                            <label asp-for="NumberOfTouristRequired" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Number Of Tourist Required </label>
+                            <input asp-for="NumberOfTouristRequired" class="form-control" placeholder="Number Of Tourist Required " type="number" />
+                            <span asp-validation-for="NumberOfTouristRequired" style="color:darkred"></span>
                         </div>
-                        </div>        *@
+                        </div>        
                     </div>
                     <div class="">
                         <input type="submit" value="Add Trip" class="btn font-weight-bolde" style="background-color:grey"/>

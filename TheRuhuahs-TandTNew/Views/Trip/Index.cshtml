@@ -13,7 +13,7 @@
  <table class="table table-hover" >
     <thead class="thead-green">
         <tr>
-            
+            <th scope="colgroup">Name</th>
             <th scope="colgroup">StartDate</th>
             <th scope="colgroup">EndDate</th>
             <th scope="colgroup"> NumberOfTouristRequired</th>
@@ -24,7 +24,7 @@
         @foreach (var trip in Model)
         {
             <tr>
-
+                <td>@trip.Name</td>
                 <td>@trip.StartDate</td>
                 <td>@trip.EndDate</td>
                 <td>@trip.NumberOfTouristRequired</td> 

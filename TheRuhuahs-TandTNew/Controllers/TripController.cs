@@ -40,7 +40,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult AddTrip(CreateTripViewModel model)
+        public IActionResult Create(CreateTripViewModel model)
         {
             _tripService.AddTrip(model);
 
