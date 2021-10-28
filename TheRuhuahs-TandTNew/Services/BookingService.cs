@@ -83,28 +83,22 @@ namespace TheRuhuahs_TandTNew.Services
         }
 
         public Booking UpdateBooking(UpdateBookingViewModel model)
-        {   List<BookingViewModel> allBookings = GetBooking();
-            string reference = "";
-            do
+        {
+            var booking = _bookingRepository.FindByBookingId(model.Id);
+            if (booking == null)
             {
-                reference = GenerateReference();
-            } 
-            while (ReferenceExist(allBookings, reference));
-                
-             var booking = new Booking
-            {
-                Id = model.Id,
-                NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-                Reference = reference,
-                Amount = model.Amount,
-                PackageId = model.PackageId,
-                CreatedAt = DateTime.Now
-               
-            };
+                return null;
+            }
+
+            booking.Id = model.Id;
+            booking.NumberOfTouristToBoard = model.NumberOfTouristToBoard;
+            booking.Amount = model.Amount;
+            booking.PackageId = model.PackageId;
+            booking.CreatedAt = DateTime.Now;
+
             return _bookingRepository.UpdateBooking(booking);
-
-
         }
+
         public List<BookingViewModel> GetBooking()
         {
             var booking = _bookingRepository.GetBooking().Select(c => new BookingViewModel

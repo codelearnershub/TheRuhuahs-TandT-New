@@ -69,5 +69,11 @@ namespace TheRuhuahs_TandTNew.Controllers
             _tripService.DeleteTrip(id);
             return RedirectToAction("Index");
         } 
+        public IActionResult GetAllTripInEachTouristCenter(int touristCenterId)
+        {
+            var trips = _tripService.GetAllTripInEachTouristCenter(touristCenterId);
+
+            return View(trips);
+        }
     }
 }

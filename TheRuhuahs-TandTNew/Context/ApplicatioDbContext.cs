@@ -47,6 +47,7 @@ namespace TheRuhuahs_TandTNew.Context
                   new User
                   {
                       Id = 1,
+                      RoleId = 1,
                       FirstName = "Oyediran",
                       LastName = "Umar",
                       Gender = "Male",
@@ -65,6 +66,7 @@ namespace TheRuhuahs_TandTNew.Context
                   new User
                   {
                       Id = 2,
+                      RoleId = 2,
                       FirstName = "Ajibola",
                       LastName = "Umar",
                       Gender = "Male",

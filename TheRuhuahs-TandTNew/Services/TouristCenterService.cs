@@ -62,7 +62,8 @@ namespace TheRuhuahs_TandTNew.Services
                 Id = c.Id,
                 Name = c.Name,
                 Location = c.Location,
-                Image = $"{WC.ImagePath}{c.Image}"
+                // Image = $"{WC.ImagePath}{c.Image}"
+                Image = c.Image
                
             }).ToList();
 

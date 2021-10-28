@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using TheRuhuahs_TandTNew.Context;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
 using TheRuhuahs_TandTNew.Models;
@@ -40,6 +41,11 @@ namespace TheRuhuahs_TandTNew.Repositories
         public List<Trip> GetTrip()
         {
             return _dbContext.Trips.ToList();
+        }
+        
+        public IEnumerable<Trip> GetAllTripInEachTouristCenter(int touristCenterId)
+        {
+            return _dbContext.Trips.Where(c => c.TouristCenterId == touristCenterId).ToList();
         }
         
     }

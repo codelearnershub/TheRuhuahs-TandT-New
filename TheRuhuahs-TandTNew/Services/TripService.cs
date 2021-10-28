@@ -79,6 +79,12 @@ namespace TheRuhuahs_TandTNew.Services
 
             return trip;
         }
+        public IEnumerable<Trip> GetAllTripInEachTouristCenter(int touristCenterId)
+        {
+            return _tripRepository.GetAllTripInEachTouristCenter(touristCenterId);
+        }
+
+        
     }
 
 }

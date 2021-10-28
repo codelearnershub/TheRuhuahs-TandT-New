@@ -14,5 +14,7 @@ namespace TheRuhuahs_TandTNew.Interfaces.Repositories
         public void DeleteTrip(int id);
 
         public List<Trip> GetTrip();
+
+        public IEnumerable<Trip> GetAllTripInEachTouristCenter(int touristCenterId);
     }
 }

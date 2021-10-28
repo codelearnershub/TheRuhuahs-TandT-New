@@ -1,6 +1,7 @@
 @model IEnumerable<TheRuhuahs_TandTNew.Models.ViewModel.TouristCenterViewModel>
 @{
     ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
 }
 
 <div class="card">
@@ -29,7 +30,7 @@
                 <td>@touristCenter.Description</td>
                 <td>@touristCenter.Location</td> 
                 <td>
-                    <img src= "@touristCenter.Image" width="100px" />
+                    <img src= "@WC.ImagePath@touristCenter.Image" alt="" />
                 </td>
                 <td>
 

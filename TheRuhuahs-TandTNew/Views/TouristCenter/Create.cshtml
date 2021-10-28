@@ -1,7 +1,8 @@
 @model TheRuhuahs_TandTNew.Models.ViewModel.CreateTouristCenterViewModel
 @{ 
 
-    ViewBag.Title = "Create";  
+    ViewBag.Title = "Create";
+    Layout = "_AdminLayout";  
 }
 
   <div class="border p-5">
@@ -49,6 +50,7 @@
         </div>
     </div>
 </div>
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

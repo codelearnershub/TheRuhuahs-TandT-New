@@ -125,19 +125,19 @@ namespace TheRuhuahs_TandTNew.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2021, 10, 27, 16, 50, 17, 861, DateTimeKind.Local).AddTicks(1240),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(2530),
                             RoleName = "SuperAdmin"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2021, 10, 27, 16, 50, 17, 861, DateTimeKind.Local).AddTicks(2014),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(3383),
                             RoleName = "Admin"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2021, 10, 27, 16, 50, 17, 861, DateTimeKind.Local).AddTicks(2023),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(3398),
                             RoleName = "Customer"
                         });
                 });
@@ -265,7 +265,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Id = 1,
                             Country = "Nigeria",
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(2021, 10, 27, 16, 50, 17, 857, DateTimeKind.Local).AddTicks(3066),
+                            DateOfBirth = new DateTime(2021, 10, 28, 3, 27, 4, 604, DateTimeKind.Local).AddTicks(9625),
                             Email = "oyeleyeoyediran20@gmail.com",
                             FirstName = "Oyediran",
                             Gender = "Male",
@@ -274,7 +274,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Mobile = "09026315926",
                             Password = "1234",
                             PasswordHash = "lnjgV8+UnY+JzL+MW8HB2DGTbR/lSmCaAXfW0/sUUX4=",
-                            RoleId = 0,
+                            RoleId = 1,
                             State = "Abeokuta",
                             StreetAddress = "Asero"
                         },
@@ -283,7 +283,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Id = 2,
                             Country = "Nigeria",
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(2021, 10, 27, 16, 50, 17, 860, DateTimeKind.Local).AddTicks(9535),
+                            DateOfBirth = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(452),
                             Email = "umaroyediran20@gmail.com",
                             FirstName = "Ajibola",
                             Gender = "Male",
@@ -292,7 +292,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Mobile = "09026315926",
                             Password = "12345",
                             PasswordHash = "GW5/aRGQzvZKdWVGizIQb6ZzeiRBREcaT2Etlm3af+Y=",
-                            RoleId = 0,
+                            RoleId = 2,
                             State = "Abeokuta",
                             StreetAddress = "Asero"
                         });
@@ -325,14 +325,14 @@ namespace TheRuhuahs_TandTNew.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2021, 10, 27, 16, 50, 17, 861, DateTimeKind.Local).AddTicks(4323),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(5986),
                             RoleId = 1,
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2021, 10, 27, 16, 50, 17, 861, DateTimeKind.Local).AddTicks(4606),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(6380),
                             RoleId = 2,
                             UserId = 2
                         });
