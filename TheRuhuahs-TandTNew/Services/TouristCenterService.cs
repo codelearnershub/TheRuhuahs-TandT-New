@@ -32,14 +32,17 @@ namespace TheRuhuahs_TandTNew.Services
         }
         public TouristCenter UpdateTouristCenter(UpdateTouristCenterViewModel model)
         {
-            var touristCenter = new TouristCenter
+            var touristCenter = _touristCenterRepository.FindByTouristCenterId(model.Id);
+            if (touristCenter == null)
             {
-                Name = model.Name,
-                Description = model.Description,
-                Location = model.Location,
-                Image = model.Image
+                return null;
+            }
 
-            };
+            touristCenter.Id = model.Id;
+            touristCenter.Name = model.Name;
+            touristCenter.Description = model.Description;
+            touristCenter.Location = model.Location;
+
             return _touristCenterRepository.UpdateTouristCenter(touristCenter);
         }
 
@@ -59,6 +62,7 @@ namespace TheRuhuahs_TandTNew.Services
                 Id = c.Id,
                 Name = c.Name,
                 Location = c.Location,
+                // Image = $"{WC.ImagePath}{c.Image}"
                 Image = c.Image
                
             }).ToList();

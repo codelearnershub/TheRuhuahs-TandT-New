@@ -1,0 +1,43 @@
+@model IEnumerable<TheRuhuahs_TandTNew.Models.ViewModel.PackageViewModel>
+@{ 
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+
+<div class="card">
+    <h2 class="text-center font-weight-bolder" style="color:green" >Packages</h2>
+</div>
+<div class="mb-4 border-right">
+    <a class="btn btn-success" asp-controller="Package" asp-action="Create">Create Packages</a>
+</div>
+
+<table class="table table-hover" >
+    <thead class="thead-green">
+        <tr>
+            
+            <th scope="colgroup">Hotel Standard</th>
+            <th scope="colgroup">Hotel Expense </th>
+            <th scope="colgroup">Feeding Expense </th>
+            <th scope="colgroup">CreatedAt</th>
+            <th scope="colgroup">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var package in Model)
+        {
+            <tr>
+
+                <td>@package.HotelStandard </td>
+                <td>@package.HotelExpense</td>
+                <td>@package.FeedingExpense</td>
+                <td>@package.CreatedAt</td>
+                <td>
+
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@package.Id">Delete</a>
+                    <a class="btn btn-success" asp-action="Update" asp-route-id="@package.Id">Update</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@package.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

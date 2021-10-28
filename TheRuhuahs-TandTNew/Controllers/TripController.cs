@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
+using TheRuhuahs_TandTNew.Models;
 using TheRuhuahs_TandTNew.Models.ViewModel;
 
 namespace TheRuhuahs_TandTNew.Controllers
@@ -7,29 +10,43 @@ namespace TheRuhuahs_TandTNew.Controllers
     public class TripController : Controller
     {
        private readonly ITripService _tripService;
+       private readonly ITouristCenterService _touristCenterService;
 
-        public TripController(ITripService tripService)
+        public TripController(ITripService tripService, ITouristCenterService touristCenterService)
         {
             _tripService = tripService;
+            _touristCenterService = touristCenterService;
         }
 
         public IActionResult Index()
         {
+            
             var trip = _tripService.GetTrip();
             return View(trip);
         }
+        // [ValidateAntiForgeryToken]
         [HttpGet]
         public IActionResult Create()
         {
+            List<TouristCenterViewModel> touristCenter = _touristCenterService.GetTouristCenter();
+
+            List<SelectListItem> listTouristCenter = new List<SelectListItem>();
+            foreach (var tourist in touristCenter)
+            {
+                SelectListItem item  = new SelectListItem(tourist.Name, tourist.Id.ToString());
+                listTouristCenter.Add(item);
+            }
+            ViewBag.TouristCenter = listTouristCenter;
             return View();
         }
         [HttpPost]
-        public IActionResult AddTrip(CreateTripViewModel model)
+        public IActionResult Create(CreateTripViewModel model)
         {
             _tripService.AddTrip(model);
 
             return RedirectToAction("Index");
         }
+        // [ValidateAntiForgeryToken]
         [HttpGet]
         public IActionResult Update()
         {
@@ -52,5 +69,11 @@ namespace TheRuhuahs_TandTNew.Controllers
             _tripService.DeleteTrip(id);
             return RedirectToAction("Index");
         } 
+        public IActionResult GetAllTripInEachTouristCenter(int touristCenterId)
+        {
+            var trips = _tripService.GetAllTripInEachTouristCenter(touristCenterId);
+
+            return View(trips);
+        }
     }
 }

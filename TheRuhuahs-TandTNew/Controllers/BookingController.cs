@@ -36,7 +36,7 @@ namespace TheRuhuahs_TandTNew.Controllers
            {
               UserId = userId,
               NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-              Package = model.Package,
+              PackageId = model.PackageId,
               Amount = model.Amount
 
            };
@@ -56,7 +56,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             Booking booking = new Booking()
            {
               NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-              Package = model.Package,
+              PackageId = model.PackageId,
               Amount = model.Amount
 
            };
@@ -99,20 +99,5 @@ namespace TheRuhuahs_TandTNew.Controllers
             return View("Details");
         }
     }
-    // public Booking UpdateBooking(UpdateBookingViewModel model)
-        // {
-        //     var booking = _bookingRepository.FindByBookingId(model.Id);
-        //     if (booking == null)
-        //     {
-        //         return null;
-        //     }
-
-        //     booking.Id = model.Id;
-        //     booking.NumberOfTouristToBoard = model.NumberOfTouristToBoard;
-        //     booking.Amount = model.Amount;
-        //     booking.Package = model.Package;
-        //     booking.CreatedAt = DateTime.Now;
-
-        //     return _bookingRepository.UpdateBooking(booking);
-        // }
+    
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TheRuhuahs_TandTNew.Interfaces.Repositories;
@@ -21,30 +22,34 @@ namespace TheRuhuahs_TandTNew.Services
             var trip = new Trip
             {
                 Id = model.Id,
+                Name = model.Name,
+                CreatedAt = DateTime.Now,
                 TouristCenterId = model.TouristCenterId,
                 StartDate = model.StartDate,
                 EndDate = model.EndDate,
                 NumberOfTouristRequired = model.NumberOfTouristRequired
 
             };
-            if(model.TouristCenterId == trip.TouristCenterId)
-            {
-               
-            }
+            
             
             return _tripRepository.AddTrip(trip);
         }
         public Trip UpdateTrip(UpdateTripViewModel model)
         {
-            var trip = new Trip
+            var trip = _tripRepository.FindByTripId(model.Id);
+            if (trip == null)
             {
-                Id = model.Id,
-                TouristCenterId = model.TouristCenterId,
-                StartDate = model.StartDate,
-                EndDate = model.EndDate,
-                NumberOfTouristRequired = model.NumberOfTouristRequired
-                
-            };
+                return null;
+            }
+
+            trip.Id = model.Id;
+            trip.Name = model.Name;
+            trip.CreatedAt = DateTime.Now;
+            trip.TouristCenterId = model.TouristCenterId;
+            trip.StartDate = model.StartDate;
+            trip.EndDate = model.EndDate;
+            trip.NumberOfTouristRequired = model.NumberOfTouristRequired;
+
             return _tripRepository.UpdateTrip(trip);
         }
 
@@ -62,6 +67,7 @@ namespace TheRuhuahs_TandTNew.Services
             var trip = _tripRepository.GetTrip().Select(c => new TripViewModel
             {
                 Id = c.Id,
+                Name = c.Name,
                 CreatedAt = c.CreatedAt,
                 TouristCenterId = c.TouristCenterId,
                 StartDate = c.StartDate,
@@ -73,6 +79,12 @@ namespace TheRuhuahs_TandTNew.Services
 
             return trip;
         }
+        public IEnumerable<Trip> GetAllTripInEachTouristCenter(int touristCenterId)
+        {
+            return _tripRepository.GetAllTripInEachTouristCenter(touristCenterId);
+        }
+
+        
     }
 
 }

@@ -1,0 +1,41 @@
+@model IEnumerable<TheRuhuahs_TandTNew.Models.ViewModel.TripViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_AdminLayout";
+}
+
+<div class="card">
+    <h2 class="text-center font-weight-bolder" style="color:green" >Trip</h2>
+</div>
+<div class="mb-4 border-right">
+    <a class="btn btn-success" asp-controller="Trip" asp-action="Create"> Create Trip</a>
+</div>
+
+ <table class="table table-hover" >
+    <thead class="thead-green">
+        <tr>
+            <th scope="colgroup">Name</th>
+            <th scope="colgroup">StartDate</th>
+            <th scope="colgroup">EndDate</th>
+            <th scope="colgroup"> NumberOfTouristRequired</th>
+            <th scope="colgroup">Time Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var trip in Model)
+        {
+            <tr>
+                <td>@trip.Name</td>
+                <td>@trip.StartDate</td>
+                <td>@trip.EndDate</td>
+                <td>@trip.NumberOfTouristRequired</td> 
+                <td>@trip.CreatedAt</td>
+                <td>
+
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@trip.Id">Delete</a>
+                    <a class="btn btn-succes" asp-action="Update" asp-route-id="@trip.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

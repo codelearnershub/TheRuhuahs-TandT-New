@@ -1,0 +1,66 @@
+@model TheRuhuahs_TandTNew.Models.ViewModel.CreatePackageViewModel
+@{
+    
+    ViewData["Title"] = "Create";
+    Layout = "_AdminLayout";
+}
+
+    <input asp-for="Id" hidden />
+    <div class="border p-4">
+        <div class="form-group row">
+            <h2 class="text-success pl-3">Create Package</h2>
+        </div>
+              <form method="post">
+                    <div class="">
+                        <div class="form-row">
+
+                            <div class="form-group col-md-5">
+                                <label asp-for="PackageType" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Package Type </label>
+                                <input asp-for="PackageType" class="form-control" placeholder="Name" type="text" />
+                                <span asp-validation-for="PackageType" style="color:darkred"></span>
+                            </div>
+                            @* <div class="form-group col-md-2">
+                            </div> *@
+                            <div class="form-group col-md-5">
+                                <label asp-for="HotelStandard" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Hotel Standard </label>
+                                <input asp-for="HotelStandard" class="form-control" placeholder="HotelStandard" type="text" />
+                                <span asp-validation-for="HotelStandard" style="color:darkred"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label asp-for="HotelExpense" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Hotel Expense</label>
+                                <input asp-for="HotelExpense" class="form-control" placeholder="HotelExpense" type="text" />
+                                <span asp-validation-for="HotelExpense" style="color:darkred"></span>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label class="form-check-label font-weight-bold" asp-for="TripId"><span style="color: darkred">*</span> Select Tourist Center</label>
+                                <div>
+
+                                    <select asp-for="TripId" asp-items="@ViewBag.Trip" class="form-control">
+                                        <option disabled selected>--Select Trip--</option>
+                                    </select>
+                                    <span asp-validation-for="TripId" style="color:darkred"></span><br>
+                                </div>
+                                </div>
+                            </div>
+                             <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label asp-for="FeedingExpense" class="form-check-label font-weight-bold"><span style="color: darkred"></span> Feeding Expense</label>
+                                <input asp-for="FeedingExpense" type="text" class="form-control" placeholder="" />
+                                <span asp-validation-for="FeedingExpense" style="color:darkred"></span>
+                            </div>
+                        </div>  
+                    <div class="">
+                        <input type="submit" value="Create Package" class="btn font-weight-bolde" style="background-color:grey"/>
+                        <a style="margin-right: 10%; color:green" asp-action="Index">Back To List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+   

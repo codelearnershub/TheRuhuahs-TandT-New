@@ -32,8 +32,8 @@ namespace TheRuhuahs_TandTNew.Migrations
                     b.Property<int>("NumberOfTouristToBoard")
                         .HasColumnType("int");
 
-                    b.Property<string>("Package")
-                        .HasColumnType("text");
+                    b.Property<int>("PackageId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Reference")
                         .HasColumnType("text");
@@ -60,19 +60,13 @@ namespace TheRuhuahs_TandTNew.Migrations
                     b.Property<decimal>("FeedingExpense")
                         .HasColumnType("decimal(18, 2)");
 
-                    b.Property<string>("FeedingStandard")
-                        .HasColumnType("text");
-
                     b.Property<decimal>("HotelExpense")
                         .HasColumnType("decimal(18, 2)");
 
                     b.Property<string>("HotelStandard")
                         .HasColumnType("text");
 
-                    b.Property<decimal>("TransportationExpense")
-                        .HasColumnType("decimal(18, 2)");
-
-                    b.Property<string>("TransportationStandard")
+                    b.Property<string>("PackageType")
                         .HasColumnType("text");
 
                     b.Property<int>("TripId")
@@ -131,19 +125,19 @@ namespace TheRuhuahs_TandTNew.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(5483),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(2530),
                             RoleName = "SuperAdmin"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(6034),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(3383),
                             RoleName = "Admin"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(6043),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(3398),
                             RoleName = "Customer"
                         });
                 });
@@ -186,6 +180,9 @@ namespace TheRuhuahs_TandTNew.Migrations
 
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
 
                     b.Property<int>("NumberOfTouristRequired")
                         .HasColumnType("int");
@@ -268,7 +265,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Id = 1,
                             Country = "Nigeria",
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(2021, 10, 25, 12, 25, 35, 941, DateTimeKind.Local).AddTicks(1846),
+                            DateOfBirth = new DateTime(2021, 10, 28, 3, 27, 4, 604, DateTimeKind.Local).AddTicks(9625),
                             Email = "oyeleyeoyediran20@gmail.com",
                             FirstName = "Oyediran",
                             Gender = "Male",
@@ -277,7 +274,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Mobile = "09026315926",
                             Password = "1234",
                             PasswordHash = "lnjgV8+UnY+JzL+MW8HB2DGTbR/lSmCaAXfW0/sUUX4=",
-                            RoleId = 0,
+                            RoleId = 1,
                             State = "Abeokuta",
                             StreetAddress = "Asero"
                         },
@@ -286,7 +283,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Id = 2,
                             Country = "Nigeria",
                             CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            DateOfBirth = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(4114),
+                            DateOfBirth = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(452),
                             Email = "umaroyediran20@gmail.com",
                             FirstName = "Ajibola",
                             Gender = "Male",
@@ -295,7 +292,7 @@ namespace TheRuhuahs_TandTNew.Migrations
                             Mobile = "09026315926",
                             Password = "12345",
                             PasswordHash = "GW5/aRGQzvZKdWVGizIQb6ZzeiRBREcaT2Etlm3af+Y=",
-                            RoleId = 0,
+                            RoleId = 2,
                             State = "Abeokuta",
                             StreetAddress = "Asero"
                         });
@@ -328,14 +325,14 @@ namespace TheRuhuahs_TandTNew.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(7839),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(5986),
                             RoleId = 1,
                             UserId = 1
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2021, 10, 25, 12, 25, 35, 944, DateTimeKind.Local).AddTicks(8107),
+                            CreatedAt = new DateTime(2021, 10, 28, 3, 27, 4, 610, DateTimeKind.Local).AddTicks(6380),
                             RoleId = 2,
                             UserId = 2
                         });

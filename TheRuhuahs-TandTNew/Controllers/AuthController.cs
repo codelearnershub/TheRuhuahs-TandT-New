@@ -98,7 +98,7 @@ namespace TheRuhuahs_TandTNew.Controllers
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(ClaimTypes.Email, user.Email),
-                    // new Claim(ClaimTypes.Role, "SuperAdmin")
+                    
                 };
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -108,7 +108,7 @@ namespace TheRuhuahs_TandTNew.Controllers
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, props);
                
-
+               
             }   
 
             
@@ -126,11 +126,11 @@ namespace TheRuhuahs_TandTNew.Controllers
             var role = _userRepository.FindUserRoles(user.Id);
             if (role.Any(r =>r.RoleId == 1))
                 {
-                    return RedirectToAction("Index", "SuperAdminDashboard");
+                    return RedirectToAction(actionName:"Index", controllerName:"TouristCenter");
                 } 
                 else if (role.Any(r =>r.RoleId == 2))
                 {
-                    return RedirectToAction("Index", "AdminDashBoard");
+                    return RedirectToAction(actionName:"DashBoard", controllerName:"Admin");
                 }
             else
             {
