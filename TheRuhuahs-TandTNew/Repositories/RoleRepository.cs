@@ -41,6 +41,21 @@ namespace TheRuhuahs_TandTNew.Repositories
                 _dbContext.SaveChanges();
             }
         }
+        public Role FindByRoleId(int id)
+        {
+            return _dbContext.Roles.Find(id);
+        }
+        
+        public void DeleteByRoleId(int id)
+        {
+            var role = FindByRoleId(id);
+
+            if (role != null)
+            {
+                _dbContext.Roles.Remove(role);
+                _dbContext.SaveChanges();
+            }
+        }
         public List<Role> GetRole()
         {
             return _dbContext.Roles.ToList();

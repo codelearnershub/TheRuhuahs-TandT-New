@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using TheRuhuahs_TandTNew.Models;
-using TheRuhuahs_TandTNew.Models.ViewModel;
 
 namespace TheRuhuahs_TandTNew.Models.ViewModel
 {

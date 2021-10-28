@@ -63,13 +63,12 @@ namespace TheRuhuahs_TandTNew.Controllers
         public IActionResult RegisterCustomer(RegisterCustomerViewModel model)
         {
 
-            _userService.RegisterCustomer(model);
             var role = _roleService.FindByRoleName("Customer");
             var roles = new List<Role>();
             roles.Add(role);
             model.Roles = roles;
             _userService.RegisterCustomer(model);
-            return RedirectToAction("Login");
+            return RedirectToAction("Home");
         }
 
         [HttpGet]
