@@ -139,6 +139,10 @@ namespace TheRuhuahs_TandTNew.Services
             }
             return null;
         }
+        public User FindByUserId(int id)
+        {
+            return _userRepository.FindByUserId(id);
+        }
 
     }
 }

@@ -10,5 +10,6 @@ namespace TheRuhuahs_TandTNew.Interfaces.ServiceInterface
         public void RegisterCustomer(RegisterCustomerViewModel model);
 
         public User LoginUser(string email, string password);
+        public User FindByUserId(int id);
     }
 }

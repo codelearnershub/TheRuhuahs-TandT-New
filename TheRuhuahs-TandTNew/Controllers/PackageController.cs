@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using TheRuhuahs_TandTNew.Interfaces.Service;
 using TheRuhuahs_TandTNew.Interfaces.ServiceInterface;
+using TheRuhuahs_TandTNew.Models;
 using TheRuhuahs_TandTNew.Models.ViewModel;
 
 namespace TheRuhuahs_TandTNew.Controllers
@@ -11,11 +13,14 @@ namespace TheRuhuahs_TandTNew.Controllers
     {
         private readonly IPackageService _packageService;
         private readonly ITripService _tripService;
-
-        public PackageController(IPackageService packageService, ITripService tripService)
+        public readonly IBookingService _bookingService;
+        public readonly IUserService _userService;
+        public PackageController(IPackageService packageService, ITripService tripService,IBookingService bookingService,IUserService userService)
         {
             _packageService = packageService;
             _tripService = tripService;
+            _bookingService = bookingService;
+            _userService = userService;
         }
         
         public IActionResult Index()
@@ -64,6 +69,31 @@ namespace TheRuhuahs_TandTNew.Controllers
         public IActionResult Delete (int id)
         {
             _packageService.DeletePackage(id);
+            return RedirectToAction("Index");
+        }
+           [HttpGet]
+       
+        public IActionResult CreateBooking()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateBooking(int id,CreateBookingViewModel model)
+        {
+            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
+            User user = _userService.FindByUserId(userId);
+            var package = _packageService.FindByPackageId(id);
+
+           Booking booking = new Booking()
+           {
+              UserId = userId,
+              NumberOfTouristToBoard = model.NumberOfTouristToBoard,
+              PackageId = model.PackageId,
+              Amount = model.Amount
+
+           };
+            _bookingService.AddBooking(model);
             return RedirectToAction("Index");
         }
     }

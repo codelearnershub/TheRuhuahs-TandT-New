@@ -4,6 +4,8 @@ namespace TheRuhuahs_TandTNew.Models
     {
         public int TripId { get; set;}
 
+        public Trip Trip { get; set;}
+
         public string PackageType { get; set;}
 
         public string HotelStandard { get; set;}

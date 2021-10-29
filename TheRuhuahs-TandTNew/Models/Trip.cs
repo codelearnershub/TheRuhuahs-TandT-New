@@ -7,6 +7,8 @@ namespace TheRuhuahs_TandTNew.Models
     {
         public int TouristCenterId { get; set;}
 
+        public TouristCenter TouristCenter { get; set;}
+
         public string Name { get; set;}
 
         public DateTime StartDate { get; set;}

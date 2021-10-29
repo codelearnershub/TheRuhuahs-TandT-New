@@ -45,7 +45,7 @@ namespace TheRuhuahs_TandTNew.Repositories
         
         public IEnumerable<Trip> GetAllTripInEachTouristCenter(int touristCenterId)
         {
-            return _dbContext.Trips.Where(c => c.TouristCenterId == touristCenterId).ToList();
+            return _dbContext.Trips.Include(u => u.TouristCenter).Where(c => c.TouristCenterId == touristCenterId).ToList();
         }
         
     }

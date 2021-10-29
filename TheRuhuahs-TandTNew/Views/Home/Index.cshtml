@@ -126,12 +126,28 @@
                             <img src="@WC.ImagePath@touristCenter.Image" alt="">
                         </div>
                         <div class="content">
-                            <p class="d-flex align-items-center">View Trips <a asp-controller= "" asp-action= "" >   </a> </p>
+                            <p class="d-flex align-items-center">View Trips <a asp-controller= "Trip" asp-action= "GetAllTripInEachTouristCenter" asp-route-id="@touristCenter.Id" >   </a> </p>     
+                        </div> 
+                                             
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_place">
+                        <div class="thumb">
                             
+                        </div>
+                        <div class="place_info">
+                            <a ><h3><td>@touristCenter.Name</td>
+                             </h3></a>
+                            <p><td>@touristCenter.Location</td></p>
+                            <div class="rating_days d-flex justify-content-between">
+                                <div class="description">
+                                    <td>@touristCenter.Description</td>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-               
     }
         </div>
     </div>
