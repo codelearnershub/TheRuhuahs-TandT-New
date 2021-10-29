@@ -20,29 +20,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             return View(booking);
         }
         // [Authorize]
-        [HttpGet]
-       
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(CreateBookingViewModel model)
-        {
-            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value); 
-
-           Booking booking = new Booking()
-           {
-              UserId = userId,
-              NumberOfTouristToBoard = model.NumberOfTouristToBoard,
-              PackageId = model.PackageId,
-              Amount = model.Amount
-
-           };
-            _bookingService.AddBooking(model);
-            return RedirectToAction("Index");
-        }
+     
 
         [HttpGet]
         public IActionResult Update()
@@ -98,6 +76,7 @@ namespace TheRuhuahs_TandTNew.Controllers
             }
             return View("Details");
         }
+        
     }
     
 }

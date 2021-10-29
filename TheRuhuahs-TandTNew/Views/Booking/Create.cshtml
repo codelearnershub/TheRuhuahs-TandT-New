@@ -1,0 +1,48 @@
+@model TheRuhuahs_TandTNew.Models.ViewModel.CreateBookingViewModel
+@{ 
+
+    ViewBag.Title = "Create";
+
+}
+
+  <div class="border p-5">
+    <div class="card">
+        <h2 class="text-center font-weight-bolder" style="color:green" >Make Booking </h2>
+    </div>
+    <form method="post" enctype="multipart/form-data">
+     <input asp-for="Id" hidden />
+                    <div class="">
+                        <div class="form-row">
+
+                            <div class="form-group col-md-5">
+                                <label asp-for="NumberOfTouristToBoard" class="form-check-label font-weight-bold"><span style="color: darkred"></span> NumberOfTouristToBoard </label>
+                                <input asp-for="NumberOfTouristToBoard" class="form-control" placeholder="NumberOfTouristToBoard" type="text" />
+                                <span asp-validation-for="NumberOfTouristToBoard" style="color:darkred"></span>
+                            </div>
+                     
+                            <div class="form-group col-md-5">
+                                <label asp-for="UserId" class="form-check-label font-weight-bold"><span style="color: darkred"></span> </label>
+                                <input asp-for="UserId" class="form-control" placeholder="Description" type="text" />
+                                <span asp-validation-for="UserId" style="color:darkred"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label asp-for="Amount" class="form-check-label font-weight-bold"><span style="color: darkred"></span>#Amount</label>
+                                <input asp-for="Amount" class="form-control" placeholder="Amount" type="text" />
+                                <span asp-validation-for="Amount" style="color:darkred"></span>
+                            </div>
+                    </div>
+                    <div class="">
+                        <input type="submit" value="Add Tourist Center" class="btn font-weight-bolder" style="background-color:green"/>
+                        <a style="margin-right: 500%; color:green" asp-action="Index">Back To List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
